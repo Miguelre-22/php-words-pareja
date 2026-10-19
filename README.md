@@ -4,4 +4,5 @@ Aplicación web que muestra las palabras reservadas de PHP con su categoría y u
 
 ## Cómo ejecutar
 
-Pendiente de documentar.
+Abrir index.html en el navegador (doble clic).
+Requiere un navegador moderno.
