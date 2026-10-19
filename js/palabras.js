@@ -34,5 +34,8 @@ const PALABRAS = [
     { palabra: "use", categoria: "otros", descripcion: "Importa una clase o un espacio de nombres." },
     { palabra: "require", categoria: "otros", descripcion: "Incluye otro archivo y detiene el script si no existe." },
     { palabra: "include", categoria: "otros", descripcion: "Incluye otro archivo y avisa si no existe, sin detener el script." },
-    { palabra: "global", categoria: "otros", descripcion: "Permite usar una variable global dentro de una función." }
+    { palabra: "global", categoria: "otros", descripcion: "Permite usar una variable global dentro de una función." },
+    { palabra: "abstract", categoria: "clases", descripcion: "Declara una clase o método que no se puede instanciar y debe completarse en una clase hija." },
+    { palabra: "static", categoria: "clases", descripcion: "Define propiedades o métodos que pertenecen a la clase y no a cada objeto." },
+    { palabra: "const", categoria: "otros", descripcion: "Declara una constante cuyo valor no puede cambiar." }
 ];
