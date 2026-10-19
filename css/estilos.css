@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: linear-gradient(160deg, #f1edff 0%, #e6ecff 50%, #f3e9ff 100%);
+    background-attachment: fixed;
+    color: #2d2a4a;
+    min-height: 100vh;
+    padding-bottom: 48px;
+}
+
+/* Cabecera */
+.cabecera {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 32px 32px;
+    background: linear-gradient(120deg, #7b5cff 0%, #5b8cff 60%, #4fa3ff 100%);
+    color: #fff;
+    border-radius: 0 0 28px 28px;
+    box-shadow: 0 16px 40px rgba(91, 92, 255, 0.35);
+}
+
+#titulo {
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+#subtitulo {
+    margin-top: 6px;
+    font-size: 1.05rem;
+    opacity: 0.9;
+}
+
+#version {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+}
+
+/* Contenido */
+.contenido {
+    max-width: 720px;
+    margin: 24px auto 0;
+    padding: 0 16px;
+}
+
+/* Controles (los rellenan los scripts de funciones) */
+#controles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#controles:empty {
+    display: none;
+}
+
+#controles input,
+#controles select {
+    flex: 1 1 220px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #2d2a4a;
+    background: #fff;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(91, 92, 255, 0.12);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#controles input:focus,
+#controles select:focus {
+    border-color: #7b5cff;
+    box-shadow: 0 4px 18px rgba(123, 92, 255, 0.3);
+}
+
+#contador {
+    margin: 22px 0 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6b6890;
+}
+
+/* Lista de palabras */
+#lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.palabra {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 18px;
+    background: #fff;
+    border-left: 5px solid var(--color);
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(45, 42, 74, 0.08);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.palabra:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(45, 42, 74, 0.14);
+}
+
+.palabra-nombre {
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color);
+}
+
+.palabra-descripcion {
+    font-size: 0.92rem;
+    color: #45425f;
+}
+
+.palabra-categoria {
+    padding: 3px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color);
+    background: var(--fondo);
+    border-radius: 999px;
+}
+
+/* Colores por categoría */
+.cat-control     { --color: #f0436a; --fondo: #ffe3ea; }
+.cat-funciones   { --color: #12b76a; --fondo: #dcfae9; }
+.cat-clases      { --color: #3b7bff; --fondo: #e0ebff; }
+.cat-excepciones { --color: #f79009; --fondo: #fff0d6; }
+.cat-otros       { --color: #9b51e0; --fondo: #f1e4ff; }
+
+@media (max-width: 560px) {
+    .cabecera {
+        padding: 32px 20px 24px;
+    }
+
+    #titulo {
+        font-size: 1.9rem;
+    }
+
+    .palabra {
+        grid-template-columns: 1fr auto;
+    }
+
+    .palabra-descripcion {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+}
